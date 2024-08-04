@@ -8,6 +8,9 @@ const io = new Server(httpServer);
 const userSocketMap = {};
 const boardUsersMap = {};
 
+const cors = require("cors");
+app.use(cors({ origin: "http://localhost:3000/" }));
+
 function getAllConnectedClients(boardId) {
   const usernames = boardUsersMap[boardId] || [];
   return usernames.map((userName) => ({
