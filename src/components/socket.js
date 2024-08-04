@@ -7,5 +7,6 @@ export const initSocket = async () => {
     timeout: 1000,
     transports: ["websocket"],
   };
-  return io("http://localhost:3002/", option);
+  return io("https://whiteboard-assignment.onrender.com/", option);
+
 };
